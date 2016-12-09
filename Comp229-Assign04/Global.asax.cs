@@ -23,6 +23,8 @@ namespace Comp229_Assign04
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             PrepareModelCollection();
+
+            //sadsadsad
         }
         private void PrepareModelCollection()
         {
