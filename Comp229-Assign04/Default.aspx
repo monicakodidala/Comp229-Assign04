@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <h2>My Games Collection!!</h2>
     <table>
         <asp:Repeater ID="modelsRepeater" runat="server">
             <ItemTemplate>
@@ -10,9 +11,15 @@
                         <div class="col-sm-4">
                             <a href='<%# String.Format("/SingleModel.aspx?name={0}&faction={1}", Eval("name"), Eval("faction")) %>' title="Please Click to see Details">
                                 <img src='<%# String.Format("/Assets/{0}.jpg", Eval("name"))%>' runat="server" class="ImageWidth" /></a>
+
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-md-4">
                             <asp:HyperLink runat="server" Text='<%# String.Format("{0} {1}", Eval("name"), Eval("faction")) %>'
                                 NavigateUrl='<%# String.Format("~/SingleModel.aspx?name={0}&faction={1}", Eval("name"), Eval("faction")) %>'></asp:HyperLink>
                         </div>
+
                     </td>
                 </tr>
             </ItemTemplate>

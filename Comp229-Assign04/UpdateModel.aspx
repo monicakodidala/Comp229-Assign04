@@ -64,7 +64,7 @@
             <tr>
                 <td><b>Types:</b></td>
                 <td>
-                    <table>
+                    <table>     
                         <asp:Repeater runat="server" ID="rptTypes">
                             <ItemTemplate>
                                 <tr>
@@ -90,7 +90,7 @@
                                         <asp:Label runat="server" Font-Bold="true" Text="<%# (10 - Container.ItemIndex).ToString() %>"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox runat="server" CssClass="form-control input-md" Text="<%# (Container.DataItem).ToString() %>"></asp:TextBox>
+                                        <asp:TextBox runat="server" ID="TxtDefensechart" CssClass="form-control input-md" Text="<%# (Container.DataItem).ToString() %>"></asp:TextBox>
                                     </td>
                                 </tr>
                             </ItemTemplate>
@@ -132,38 +132,34 @@
                             <ItemTemplate>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="TxtActionsName" runat="server" Text="Name:"></asp:Label>
+                                        <asp:Label runat="server" Text="Name:"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Name")  %>'></asp:TextBox>
-                                    </td>
-                                    <td>
-                                        <%--<asp:Textbox ID="TxtActionsName" runat="server" CssClass="form-control input-md"></asp:Textbox>--%>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <asp:Label ID="TxtActionsType" runat="server" Text="Type:"></asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:Textbox runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Type")  %>'></asp:Textbox>
+                                        <asp:TextBox ID="TxtActionsName" runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Name")  %>'></asp:TextBox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="TxtActionsRating" runat="server" Text="Rating:"></asp:Label>
+                                        <asp:Label runat="server" Text="Type:"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Rating")  %>'></asp:TextBox>
+                                        <asp:Textbox ID="TxtActionsType" runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Type")  %>'></asp:Textbox>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="TxtActionsRange" runat="server" Text="Range:"></asp:Label>
+                                        <asp:Label runat="server" Text="Rating:"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Range")  %>'></asp:TextBox>
+                                        <asp:TextBox ID="TxtActionsRating" runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Rating")  %>'></asp:TextBox>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label runat="server" Text="Range:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="TxtActionsRange" runat="server" CssClass="form-control input-md" Text='<%# DataBinder.Eval(Container.DataItem,"Range")  %>'></asp:TextBox>
                                     </td>
 
                                 </tr>

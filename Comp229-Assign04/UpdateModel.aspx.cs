@@ -95,8 +95,41 @@ namespace Comp229_Assign04
             }
             _newModel.types = newtypes;
 
-           string attachment =  Global.updateNewJsonFile(_newModel);
+            String[] newdefensechart = new String[10];
+            counter = 0;
 
+            foreach (RepeaterItem ri in rptDefenseChart.Items)
+            {
+                string defensechart = ((TextBox)ri.FindControl("TxtDefensechart")).Text;
+                newdefensechart[counter++] = defensechart;
+            }
+            _newModel.defenseChart = newdefensechart;
+
+
+            _newModel.mobility = TxtMobilityValue.Text == "" ? 0 : int.Parse(TxtMobilityValue.Text);
+            _newModel.willpower = TxtWillPowerValue.Text == "" ? 0 : int.Parse(TxtWillPowerValue.Text);
+            _newModel.resiliance = TxtResilianceValue.Text == "" ? 0 : int.Parse(TxtResilianceValue.Text);
+            _newModel.wounds = TxtWoundsValue.Text == "" ? 0 : int.Parse(TxtWoundsValue.Text);
+
+            //Action[] _action = new Action[2];
+            //counter = 0;
+
+            //foreach (RepeaterItem ri in rptActions.Items)
+            //{
+            //    string TxtActionsName = ((TextBox)ri.FindControl("TxtActionsName")).Text;
+            //    string TxtActionsType = ((TextBox)ri.FindControl("TxtActionsType")).Text;
+            //    string TxtActionsRating = ((TextBox)ri.FindControl("TxtActionsRating")).Text;
+            //    string TxtActionsRange = ((TextBox)ri.FindControl("TxtActionsRange")).Text;
+
+            //    _action[0] = TxtActionsName;
+            //}
+
+            //_newModel.actions = 
+
+            //Update and create a new json file
+            string attachment =  Global.updateNewJsonFile(_newModel);
+
+            //Send Email to "monicakodidala@gmail.com"
             Global.EmailJsonFile("monicakodidala@gmail.com", "monica", attachment);
         }
     }
