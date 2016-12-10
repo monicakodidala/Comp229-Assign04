@@ -14,6 +14,7 @@ namespace Comp229_Assign04
         private Model _Model;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Load query string values to local variables
             var name = Request.QueryString["name"];
             var faction = Request.QueryString["faction"];
 
@@ -31,7 +32,7 @@ namespace Comp229_Assign04
 
         private void SetBindings()
         {
-            //ImgGame.ImageUrl = _Model.imageURL;
+            //Binds Values
             LblNameValue.Text = _Model.name;
             LblFactionValue.Text = _Model.faction;
             LblRankValue.Text = _Model.rank.ToString();

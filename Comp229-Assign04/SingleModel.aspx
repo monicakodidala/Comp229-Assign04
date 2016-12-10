@@ -1,4 +1,9 @@
-﻿<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SingleModel.aspx.cs" Inherits="Comp229_Assign04.SingleModel" %>
+﻿<%--Filename: SingleModel.aspx
+Authors Name: Venkata Kodithala
+Student ID: 300920874
+Creation Date: 2016-12-08--%>
+
+<%@ Page Title="About" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SingleModel.aspx.cs" Inherits="Comp229_Assign04.SingleModel" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -15,7 +20,6 @@
             </td>
         </tr>
         <tr>
-            T<%--his is a comment--%>
             <td>
                 <asp:Label ID="LblFaction" runat="server" Text="Faction:"></asp:Label>
                 <asp:Label ID="LblFactionValue" runat="server"></asp:Label>
@@ -202,29 +206,3 @@
 </asp:Content>
 
 
-<%--"name":"Union Worker",
-		"faction":"Teknes",
-		"rank":1,
-		"base":3,
-		"size":2,
-		"deploymentZone":"C",
-		"traits":["Union Worker"],
-		"types":["Infantry"],
-		"defenseChart":["OVERPOWER","STRIKE","STRIKE","STRIKE","STRIKE","BLOCK","BLOCK","ARMOR","ARMOR","ARMOR"],
-		"mobility":5,
-		"willpower":4,
-		"resiliance":1,
-		"wounds":2,
-		"actions":[
-			{
-				"name":"Savage Blow",
-				"type":"Melee",
-				"rating":1,
-				"range":"0"
-			}
-		],
-		"specialAbilities":[
-			{
-				"name":"Pain Fulled",
-				"description":"While this model has 1 or more damage on it, it gains [+1] Mobility, and its melee attacks gain Unstoppable(1) and [+1] Rating."
-			}--%>

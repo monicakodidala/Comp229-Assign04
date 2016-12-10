@@ -14,6 +14,7 @@ namespace Comp229_Assign04
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Deserialize Json and bind data to repeater control
             List<Model> _model = JsonConvert.DeserializeObject<List<Model>>(File.ReadAllText(@"C:\Users\monica\Desktop\Assign04.json"));
 
             modelsRepeater.DataSource = _model;

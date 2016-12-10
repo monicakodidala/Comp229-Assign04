@@ -10,25 +10,21 @@ namespace Comp229_Assign04
 {
     public partial class UpdateModel : Page 
     {
+       
         private Model _Model;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
                 var name = Request.QueryString["name"];
-                var faction = Request.QueryString["faction"];
-                //if (string.IsNullOrEmpty(name))
-                //{
-                //    Response.Redirect("~/Default.aspx");
-                //    return;
-                //}
+                var faction = Request.QueryString["faction"];                
                 _Model = Global.Models.FirstOrDefault(tModel => tModel.name == name && tModel.faction == faction);
                 SetBindings();
             }
         }
         private void SetBindings()
         {
-            //ImgGame.ImageUrl = _Model.imageURL;
+            //Binds value to UI
             TxNameValue.Text = _Model.name;
             TxtFactionValue.Text = _Model.faction;
             TxtRankValue.Text = _Model.rank.ToString();

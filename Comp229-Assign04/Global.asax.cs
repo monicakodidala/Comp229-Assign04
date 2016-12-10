@@ -26,8 +26,7 @@ namespace Comp229_Assign04
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             PrepareModelCollection();
-
-            //sadsadsad
+            
         }
         private void PrepareModelCollection()
         {
@@ -57,6 +56,7 @@ namespace Comp229_Assign04
         }
         public static void EmailJsonFile(string clientEmailAddress, string clientName, string attachmentFileName)
         {
+            //Sends Email
             SmtpClient smtpClient = new SmtpClient("smtp-mail.outlook.com", 587);
             smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
 
@@ -72,8 +72,7 @@ namespace Comp229_Assign04
 
                 smtpClient.Host = "smtp-mail.outlook.com";
                 smtpClient.EnableSsl = true;
-
-                // SET UseDefaultCredentials to false BEFORE setting Credentials - we all have 'ugh' moments
+                
                 smtpClient.UseDefaultCredentials = false;
                 smtpClient.Credentials = new System.Net.NetworkCredential("cc-comp229f2016@outlook.com", "comp229pwd");
 
