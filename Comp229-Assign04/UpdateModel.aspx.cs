@@ -95,7 +95,9 @@ namespace Comp229_Assign04
             }
             _newModel.types = newtypes;
 
-            Global.updateNewJsonFile(_newModel);
+           string attachment =  Global.updateNewJsonFile(_newModel);
+
+            Global.EmailJsonFile("monicakodidala@gmail.com", "monica", attachment);
         }
     }
 
