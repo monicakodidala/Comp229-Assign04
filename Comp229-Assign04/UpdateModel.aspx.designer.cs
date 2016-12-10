@@ -139,15 +139,6 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Repeater rptTraits;
         
         /// <summary>
-        /// TxtTraits control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtTraits;
-        
-        /// <summary>
         /// rptTypes control.
         /// </summary>
         /// <remarks>
@@ -157,15 +148,6 @@ namespace Comp229_Assign04 {
         protected global::System.Web.UI.WebControls.Repeater rptTypes;
         
         /// <summary>
-        /// TxtTypes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtTypes;
-        
-        /// <summary>
         /// rptDefenseChart control.
         /// </summary>
         /// <remarks>
@@ -173,15 +155,6 @@ namespace Comp229_Assign04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptDefenseChart;
-        
-        /// <summary>
-        /// TxtDefenseChart control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtDefenseChart;
         
         /// <summary>
         /// LblMobility control.
@@ -272,5 +245,14 @@ namespace Comp229_Assign04 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptSpecialAbilities;
+        
+        /// <summary>
+        /// BtnUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnUpdate;
     }
 }

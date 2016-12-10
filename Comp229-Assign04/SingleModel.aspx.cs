@@ -14,9 +14,11 @@ namespace Comp229_Assign04
         private Model _Model;
         protected void Page_Load(object sender, EventArgs e)
         {
-            UpdateModel.NavigateUrl = String.Format("~/UpdateModel.aspx?");
             var name = Request.QueryString["name"];
             var faction = Request.QueryString["faction"];
+
+            UpdateModel.NavigateUrl = String.Format("~/UpdateModel.aspx?name={0}&faction={1}",name,faction);
+            
 
             if(string.IsNullOrEmpty(name))
             {
@@ -33,7 +35,7 @@ namespace Comp229_Assign04
             LblNameValue.Text = _Model.name;
             LblFactionValue.Text = _Model.faction;
             LblRankValue.Text = _Model.rank.ToString();
-            LblBaseValue.Text = _Model._base + "mm";
+            LblBaseValue.Text = _Model._base.ToString();
             LblSizeValue.Text = _Model.size.ToString();
             LblDeploymentZoneValue.Text = _Model.deploymentZone.ToString();
 

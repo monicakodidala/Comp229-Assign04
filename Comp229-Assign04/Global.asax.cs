@@ -16,7 +16,8 @@ namespace Comp229_Assign04
     {
         public static IEnumerable<Model> Models;
         private const string ModelsJsonPath = "~/Content/json/Assign04.Json";
-        //private const string ModelsJsonPath = "~/Content/json/Assign04.Json";
+
+        private const string ModelsNewJsonPath = "";
         void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
@@ -36,14 +37,18 @@ namespace Comp229_Assign04
 
            
         }
-        //public static void updateNewJsonFile() /*creates new json*/
-        //{
-        //    using (StreamWriter streamWriter = new StreamWriter(jsonConvert.SerializeObject(Models)))
-        //    {
-        //        File.CreateText(System.Web.Hosting
-        //    }
-        //}
-        //public static void EmailJson    
-        //}
+        public static void updateNewJsonFile(Model _newModel) /*creates new json*/
+        {
+            //Assigns a random number to newly created json
+            Random random = new Random();
+            int randomNumber = random.Next(0, 10000);
+
+            // serialize JSON directly to a file to the specified path
+            using (StreamWriter file = File.CreateText(@"C:/json/Assign04_" + randomNumber + ".json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, _newModel);
+            }         
+        }        
     }
 }

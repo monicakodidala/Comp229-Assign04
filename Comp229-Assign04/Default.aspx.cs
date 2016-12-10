@@ -18,7 +18,7 @@ namespace Comp229_Assign04
 
             modelsRepeater.DataSource = _model;
             modelsRepeater.DataBind();
-            //sjadhslkjsadasd
+            
         }
     }
 }
